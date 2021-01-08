@@ -21,7 +21,7 @@ namespace ToDoApp.ViewModels
         public ICommand Save => new Command(async () =>
         {
             await repository.AddOrUpdate(Item);
-            await Navigation.PushAsync();
+            await Navigation.PopAsync();
         });
     }
 }
